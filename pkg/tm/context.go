@@ -117,6 +117,7 @@ func SetTransactionRole(ctx context.Context, role GlobalTransactionRole) {
 	}
 }
 
+// IsGlobalTx check if xid is nil
 func IsGlobalTx(ctx context.Context) bool {
 	variable := ctx.Value(seataContextVariable)
 	if variable == nil {

@@ -48,6 +48,7 @@ func WithGlobalTx(ctx context.Context, ti *TransactionInfo, business CallbackWit
 		return errors.New("global transaction name is required.")
 	}
 
+	// 向 tc 注册一个xid
 	if ctx, re = begin(ctx, ti.Name); re != nil {
 		return
 	}
