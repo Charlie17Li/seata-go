@@ -121,7 +121,7 @@ func (m mockRows) Close() error {
 	panic("implement me")
 }
 
-func (m mockRows) Next(dest []driver.Value) error {
+func (m *mockRows) Next(dest []driver.Value) error {
 	if index == len(rowVals) {
 		return io.EOF
 	}
